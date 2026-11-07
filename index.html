@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantAlpha Engine | Bayesian Risk & ML Analytics</title>
+    <style>
+        :root {
+            --bmo-blue: #0079C1;
+            --bmo-blue-dark: #005A91;
+            --bmo-red: #ED1C24;
+            --bg-dark: #0B131E;
+            --card-bg: #141E2F;
+            --text-main: #FFFFFF;
+            --text-muted: #94A3B8;
+            --border-color: #1E293B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .badge-bmo {
+            background-color: var(--bmo-red);
+            color: white;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10B981;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10B981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        .hero {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn-primary {
+            background-color: var(--bmo-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--bmo-blue-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--bmo-blue);
+            background: rgba(0, 121, 193, 0.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            color: var(--bmo-blue);
+            margin-bottom: 0.75srem;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <div class="badge-bmo">BMO TARGET</div>
+                <h1>QuantAlpha Engine</h1>
+            </div>
+            <div class="status-pill">
+                <span class="status-dot"></span> System Online
+            </div>
+        </header>
+
+        <section class="hero">
+            <h2>Automated Quantitative Research & Risk Analytics</h2>
+            <p>High-performance financial data ingestion platform integrating Bayesian MCMC posterior inference, XGBoost price-direction classification, and live Prometheus system telemetry.</p>
+            <div class="cta-buttons">
+                <a href="http://127.0.0.1:8000/docs" target="_blank" class="btn btn-primary">
+                    🚀 Explore Interactive Swagger Docs
+                </a>
+                <a href="http://127.0.0.1:8000/metrics" target="_blank" class="btn btn-secondary">
+                    📊 View Prometheus Metrics
+                </a>
+                <a href="https://github.com/YOUR_USERNAME/quantalpha-engine" target="_blank" class="btn btn-secondary">
+                    📂 GitHub Repository
+                </a>
+            </div>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Bayesian Inference (PyMC)</h3>
+                <p>Computes posterior distributions for asset return means (μ) and volatility (σ) using Hamiltonian Monte Carlo (NUTS sampler) with 95% Highest Density Intervals.</p>
+            </div>
+            <div class="card">
+                <h3>ML Classification (XGBoost)</h3>
+                <p>Extracts rolling technical indicators and lagged returns to train gradient-boosted decision trees for directional asset movement prediction.</p>
+            </div>
+            <div class="card">
+                <h3>Production Telemetry</h3>
+                <p>Equipped with real-time Prometheus counters and request latency histograms to monitor endpoint throughput and model inference speed.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>QuantAlpha Engine &bull; Designed for Quantitative Analytics & Data Science Engineering &bull; 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
